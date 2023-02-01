@@ -10,7 +10,7 @@ use {
 
 fn main() {
     let dir = env::var("CARGO_MANIFEST_DIR").unwrap();
-    println!("cargo:rustc-link-search=native={}", Path::new(&dir).join("program/src").display());
+    println!("cargo:rustc-link-search=native={}", Path::new(&dir).join("program/c/target").display());
 
     // Generate and write bindings
     let bindings = Builder::default()
