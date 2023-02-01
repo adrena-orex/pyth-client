@@ -1,7 +1,6 @@
 *.swp
 build
 debug
-target
 cmake-build-*
 Cargo.lock
 /venv
