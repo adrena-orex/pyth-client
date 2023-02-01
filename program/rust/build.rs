@@ -1,3 +1,5 @@
+use std::{path::Path, env};
+
 use {
     bindgen::Builder,
     std::{
@@ -7,7 +9,8 @@ use {
 };
 
 fn main() {
-    println!("cargo:rustc-link-search=./program/c/target");
+    let dir = env::var("CARGO_MANIFEST_DIR").unwrap();
+    println!("cargo:rustc-link-search=native={}", Path::new(&dir).join("../c/target").display());
 
     // Generate and write bindings
     let bindings = Builder::default()
