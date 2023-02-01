@@ -46,7 +46,6 @@ fn test_add_publisher() {
     let price_account = price_setup.as_account_info();
     PriceAccount::initialize(&price_account, PC_VERSION).unwrap();
 
-
     **price_account.try_borrow_mut_lamports().unwrap() = 100;
 
     // Expect the instruction to fail, because the price account isn't rent exempt
