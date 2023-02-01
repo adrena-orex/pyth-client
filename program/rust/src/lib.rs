@@ -11,7 +11,8 @@ pub mod processor;
 pub mod time_machine_types;
 pub mod utils;
 
-pub mod tests;
+#[cfg(test)]
+mod tests;
 
 #[cfg(feature = "debug")]
 mod log;
