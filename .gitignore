@@ -1,9 +1,8 @@
 *.swp
 build
 debug
-cmake-build-*
-Cargo.lock
 /venv
+target
 
 # IntelliJ / CLion configuration
 .idea
