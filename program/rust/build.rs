@@ -7,7 +7,7 @@ use {
 };
 
 fn main() {
-    println!("cargo:rustc-link-search=./program/c/target");
+    println!("cargo:rustc-link-search=../c/target");
 
     // Generate and write bindings
     let bindings = Builder::default()
